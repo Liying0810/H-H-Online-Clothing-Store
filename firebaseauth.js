@@ -1,41 +1,63 @@
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-  import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js"
-  import {getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
 
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDG4Fb2hlLRCcSswAt4nIakTBnm4od1oiw",
+  authDomain: "hh-online-clothing-store.firebaseapp.com",
+  projectId: "hh-online-clothing-store",
+  storageBucket: "hh-online-clothing-store.appspot.com",
+  messagingSenderId: "75598662869",
+  appId: "1:75598662869:web:67cce0478bb5385867a65c"
+};
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDG4Fb2hlLRCcSswAt4nIakTBnm4od1oiw",
-    authDomain: "hh-online-clothing-store.firebaseapp.com",
-    projectId: "hh-online-clothing-store",
-    storageBucket: "hh-online-clothing-store.appspot.com",
-    messagingSenderId: "75598662869",
-    appId: "1:75598662869:web:67cce0478bb5385867a65c"
-  };
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+// Sign-up functionality
+const signupForm = document.querySelector('form.signup');
+signupForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = document.getElementById('signup-email').value;
+  const password = document.getElementById('signup-password').value;
+  const confirmPassword = document.getElementById('signup-confirm-password').value;
 
-  
-  const loginText = document.querySelector(".title-text .login");
-  const loginForm = document.querySelector("form.login");
-  const loginBtn = document.querySelector("label.login");
+  if (password !== confirmPassword) {
+    alert('Passwords do not match!');
+    return;
+  }
 
-  const
-  const signupBtn = document.querySelector("label.signup");
-  const signupLink = document.querySelector("form .signup-link a");
-  signupBtn.onclick = (() => {
-    loginForm.style.marginLeft = "-50%";
-    loginText.style.marginLeft = "-50%";
-  });
-  loginBtn.onclick = (() => {
-    loginForm.style.marginLeft = "0%";
-    loginText.style.marginLeft = "0%";
-  });
-  signupLink.onclick = (() => {
-    signupBtn.click();
-    return false;
-  });
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed up successfully
+      const user = userCredential.user;
+      console.log('User signed up:', user);
+      alert('Sign-up successful!');
+    })
+    .catch((error) => {
+      console.error('Error during sign-up:', error.code, error.message);
+      alert('Sign-up failed: ' + error.message);
+    });
+});
+
+// Login functionality
+const loginForm = document.querySelector('form.login');
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = document.getElementById('login-email').value;
+  const password = document.getElementById('login-password').value;
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Logged in successfully
+      const user = userCredential.user;
+      console.log('User logged in:', user);
+      alert('Login successful!');
+    })
+    .catch((error) => {
+      console.error('Error during login:', error.code, error.message);
+      alert('Login failed: ' + error.message);
+    });
+});
+
