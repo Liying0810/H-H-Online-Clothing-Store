@@ -1,6 +1,6 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+import { getFirestore, doc, setDoc, getDoc, query, where, getDocs, collection } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -86,3 +86,60 @@ loginForm.addEventListener('submit', async (e) => {
     alert('Login failed: ' + error.message);
   }
 });
+
+// Forget Password functionality
+const forgotPasswordLink = document.getElementById('forgot-password-link');
+forgotPasswordLink.addEventListener('click', async (e) => {
+  e.preventDefault();
+  
+  const email = document.getElementById('login-email').value;
+
+  if (!email || !isValidEmail(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  try {
+    // Check if the email exists in Firestore
+    const q = query(collection(db, "account"), where("email", "==", email));
+    const querySnapshot = await getDocs(q);
+
+    if (querySnapshot.empty) {
+      alert('This email has not been registered yet. Please check the email or sign up.');
+      return;
+    }
+
+    // Check the role of the user
+    let userRole = null;
+    querySnapshot.forEach(doc => {
+      userRole = doc.data().role;
+    });
+
+    if (userRole === 'admin') {
+      alert('Admins cannot reset passwords through this form. Please contact support.');
+      return;
+    }
+
+    // If email exists and user is not an admin, send password reset email
+    await sendPasswordResetEmail(auth, email);
+    alert('If an account with that email exists, a password reset link has been sent. Please check your inbox.');
+
+  } catch (error) {
+    console.error('Error during password reset:', error.code, error.message);
+
+    // Handle specific errors
+    if (error.code === 'auth/invalid-email') {
+      alert('The email address is not valid. Please enter a valid email address.');
+    } else if (error.code === 'auth/missing-email') {
+      alert('No email address was provided. Please enter your email.');
+    } else {
+      alert('Failed to send password reset email: ' + error.message);
+    }
+  }
+});
+
+// Helper function to validate email format
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
