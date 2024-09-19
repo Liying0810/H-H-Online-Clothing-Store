@@ -1951,7 +1951,8 @@ input[type='checkbox'] {
 }
 
 .quantity__input[type='number'] {
-  -moz-appearance: textfield;
+  appearance: textfield; /* Standard property for all browsers */
+  -moz-appearance: textfield; /* Firefox specific */
 }
 
 /* component-modal */
@@ -2118,10 +2119,6 @@ input[type='checkbox'] {
   top: 0;
 }
 
-.header-wrapper--border-bottom {
-/*   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08); */
-}
-
 .header {
   display: grid;
   grid-template-areas: 
@@ -2166,10 +2163,6 @@ input[type='checkbox'] {
 
   .header--middle-left .header__inline-menu {
     min-width: 45rem;
-  }
-
-  .header:not(.header--middle-left) .header__inline-menu {
-/*     margin-top: 1.05rem; */
   }
 
   .header .search-modal__form{
@@ -2339,10 +2332,6 @@ menu-drawer + .header__search {
     display: inline-flex;
   }
 
-  .header:not(.header--top-center) > .header__search,
-  .header--top-center * > .header__search {
-    /* display: none; */
-  }
 }
 
 .no-js .predictive-search {
