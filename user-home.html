@@ -1,72 +1,50 @@
 <!doctype html>
 <html class="no-js">
 <head>
-  <!-- Basic page needs ================================================== -->
+  <!-- Basic page needs -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256 free-h-icon-download-in-svg-png-gif-file-formats--logo-character-alphabet-characters-pack-sign-symbols-icons-32852.png?f=webp&w=256" />
   
-  <!-- Title and description ================================================== -->
+  <!-- Title and description -->
   <title>Home page | H&H Online Clothing Store</title>
   <meta name="description" content="Self manufactured brand - We made high quality clothing with affordable price.">
 
-  <!-- CSS ================================================== -->
+  <!-- CSS -->
   <link rel="stylesheet" href="homestyle.css">
 
-  <!-- Helpers ================================================== -->
+  <!-- Helpers -->
   <link rel="canonical" href="http://127.0.0.1:5500/user-home.html">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <meta name="theme-color" content="#FFFECE">
 
-  <!-- JavaScript ================================================== -->
+  <!-- JavaScript -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript" ></script>
   <script type="module" src="announcementbar.js"></script>
   
-  <!-- Announcement Bar ============================================ -->
+  <!-- Announcement Bar -->
   <input type="hidden" id="total_announcement_left" name="total_announcement_left" value="3">
   <input type="hidden" id="locale" name="locale" value="en_US">
 
-  <slider-announcement-bar-app id="announcement-bar" name="announcement-bar" style="
-  border: unset;
-  padding: 4px 0px;
-  margin: 0px;
-  z-index:2999;
-  background:rgb(43, 43, 43);
-  color:rgb(254, 254, 254);
-  position: -webkit-sticky; position: sticky; top: 0;
-">
+  <slider-announcement-bar-app id="announcement-bar" name="announcement-bar" style=" border: unset; padding: 4px 0px; margin: 0px;z-index:2999; background:rgb(43, 43, 43); color:rgb(254, 254, 254); position: -webkit-sticky; position: sticky; top: 0; ">
 
-  <div style="
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 0px;
-    border-top: 0px;
-    border-bottom: 0px;
-    border-color: transparent;
-  ">
+  <div style=" display: flex; justify-content: space-between; align-items: center; padding: 0px 0px; border-top: 0px;border-bottom: 0px; border-color: transparent;">
     <div style="height: 24px;">
       <a id="previous-announcement-bar-button" class="announcement-bar-direction-button" type="button" name="previous" style="height: 24px;">
-  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <polyline points="15 6 9 12 15 18" />
-  </svg>
-</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <polyline points="15 6 9 12 15 18" />
+        </svg>
+      </a>
     </div>
 
     <ul style="flex-grow: 2; margin: 0px;">
-            <li id="announcement_bar_0" style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: wrap;
-          margin: 0px;
-          width: 100%;
-          word-wrap: break-word;
-        ">
-        All Ready Stocks, Orders ship in 1-3 days 🦄
-                        <input type="hidden" id="expired_at_0" name="expired_at_0" value="2023-11-13 09:36">
+      <li id="announcement_bar_0" style=" display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin: 0px; width: 100%; word-wrap: break-word;"> All Ready Stocks, Orders ship in 1-3 days 🦄
+        <input type="hidden" id="expired_at_0" name="expired_at_0" value="2023-11-13 09:36">
       </li>
+
+
+      <!-- In progress -->
             <li id="announcement_bar_1" style="
           display: flex;
           justify-content: center;
@@ -106,106 +84,7 @@
   </div>
 </slider-announcement-bar-app>
 
-<!-- In progress - /Snippet -->
-
-<!-- Snippet:global/body_start: Console Extension -->
-<div id='es_console' style='display: none;'>180938</div>
-<!-- /Snippet -->
-
-	
- 	<style>
-  header {
-    --logo-width: 125px;
-  }
-  .header-wrapper,
-  .header-wrapper .list-menu--disclosure,
-  .header-wrapper .search-modal{
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .header-wrapper .search-modal .field__input{
-    background-color: rgb(var(--color-background));
-  }
-  .header-wrapper summary .icon-caret,
-  .header-wrapper .header__menu-item a,
-  .header-wrapper .list-menu__item,
-  .header-wrapper .link--text{
-    color: #000000;
-  }
-  .header__logo_secondary{
-    display: none;
-  }
-  
-  .search-modal__form{
-    position: relative;
-  }
-  
-  .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 5px 0;
-    background-color: #fff;
-    z-index: 1000;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border: 1px solid rgba(var(--color-foreground), 1);
-    border-top: none;
-    overflow-x: hidden;
-    overflow-y: auto;
-    max-height: 350px;
-  }
-  
-  .dropdown-item {
-    padding: 0.4rem 2rem;
-    cursor: pointer;
-    line-height: 1.4;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
-  .dropdown-item:hover{
-    background-color: #f3f3f3;
-  }
-  
-  .search__input.is-focus{
-    border-radius: 15px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border: 1px solid rgba(var(--color-foreground), 1);
-    border-bottom: none;
-    box-shadow: none;
-  }
-  
-  .clear-all {
-    text-align: right;
-    padding: 0 2rem 0.2rem;
-    line-height: 1;
-    font-size: 70%;
-    margin-bottom: -2px;
-  }
-  
-  .clear-all:hover{
-    background-color: #fff;
-  }
-  
-  .search-input-focus .easystore-section-header-hidden{
-    transform: none;
-  }
-</style>
-
-
-
-<link rel="preload" href="https://store-themes.easystore.co/180938/themes/310721/assets/section-header.css?t=1726628820" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="https://store-themes.easystore.co/180938/themes/310721/assets/component-list-menu.css?t=1726628820" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="https://store-themes.easystore.co/180938/themes/310721/assets/component-menu-drawer.css?t=1726628820" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="https://store-themes.easystore.co/180938/themes/310721/assets/component-cart-notification.css?v1.1?t=1726628820" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-<script src="https://store-themes.easystore.co/180938/themes/310721/assets/cart-notification.js?t=1726628820" defer="defer"></script>
-<script src="https://store-themes.easystore.co/180938/themes/310721/assets/details-modal.js?t=1726628820" defer="defer"></script>
-
+<!-- Search Icon And Close Icon ======================== -->
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
   <symbol id="icon-search" viewbox="0 0 18 19" fill="none">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"/>
@@ -216,557 +95,32 @@
   </symbol>
 </svg>
 
-
+<!-- Header Section -->
 <div id="easystore-section-header">
+
+  <!-- Sticky Header Component -->
   <sticky-header class="header-wrapper header-wrapper--border-bottom">
+
+    <!-- Main Header Element -->
     <header class="header header--middle-left page-width header--has-menu">
-      <div class="header__left-icon header__icons large-up-hide">
-        <header-drawer data-breakpoint="tablet">
-          <details class="menu-drawer-container menu-opening">
-            <summary class="header__icon header__icon--menu header__icon--summary link link--text focus-inset" aria-label="Menu" role="button" aria-expanded="true" aria-controls="menu-drawer">
-              <span>
-                
-
-
-    <svg class="icon icon-hamburger " data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="M32.5,65h535a25,25,0,0,0,0-50H32.5a25,25,0,0,0,0,50Z" fill="currentColor"/><path d="M567.5,275H32.5a25,25,0,0,0,0,50h535a25,25,0,0,0,0-50Z" fill="currentColor"/><path d="M567.5,535H32.5a25,25,0,0,0,0,50h535a25,25,0,0,0,0-50Z" fill="currentColor"/></svg>
-
-  
-
-                
-
-
-    <svg class="icon icon-close " data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="M335.36,300,581.87,53.48a25,25,0,0,0-35.35-35.35L300,264.64,53.48,18.13A25,25,0,0,0,18.13,53.48L264.64,300,18.13,546.52a25,25,0,0,0,35.35,35.35L300,335.36,546.52,581.87a25,25,0,0,0,35.35-35.35Z" fill="currentColor"/></svg>
-
-  
-
-              </span>
-            </summary>
-            <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
-              <div class="menu-drawer__inner-container">
-                <div class="menu-drawer__navigation-container">
-                  <nav class="menu-drawer__navigation">
-                    <ul class="menu-drawer__menu list-menu" role="list">
-                      
-                      
-                        
-                          <li>
-                            <a href="/"  class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
-                              Home
-                            </a>
-                          </li>
-                        
-                      
-                      
-                        
-                          
-                          <li>
-                            <details>
-                                  <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset" role="button" aria-expanded="false" aria-controls="link-Bags">
-                                    <a href="https://www.memoires.my/collections/all"  class="link--text list-menu__item menu-drawer__menu-item">
-                                      Shop All
-                                    </a>
-                                    
-
-
-    <svg class="icon icon-arrow " data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 339.56"><path d="M31.06,196.67H504l-88.56,88.56a26.89,26.89,0,1,0,38,38L588,188.79a26.89,26.89,0,0,0,0-38L453.49,16.29a26.89,26.89,0,0,0-38,38L504,142.88H31.06a26.9,26.9,0,0,0,0,53.79Z" fill="currentColor"/></svg>
-
-  
-
-                                    
-
-
-    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret " viewBox="0 0 10 6">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
-    </svg>
-
-  
-
-                                  </summary>
-                                  <div class="menu-drawer__submenu motion-reduce" tabindex="-1">
-                                    <div class="menu-drawer__inner-submenu">
-                                      <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                                        
-
-
-    <svg class="icon icon-arrow " data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 339.56"><path d="M31.06,196.67H504l-88.56,88.56a26.89,26.89,0,1,0,38,38L588,188.79a26.89,26.89,0,0,0,0-38L453.49,16.29a26.89,26.89,0,0,0-38,38L504,142.88H31.06a26.9,26.9,0,0,0,0,53.79Z" fill="currentColor"/></svg>
-
-  
-
-                                        Shop All
-                                      </button>
-                                      <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/t-shirt"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Top
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/bottom"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Bottom
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/set-1"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Set (Top+Bottom)
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/one-piece"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                One Piece
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/inner-wear"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Inner Wear
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/outer"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Outer
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/accessories"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Accessories
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/lastchanceitems-defectitems"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                瑕疵特价 Defect Sale
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                        
-                                      </ul>
-                                    </div>
-                                  </div>
-                            </details>
-                          </li>
-                        
-                      
-                      
-                        
-                          
-                          <li>
-                            <details>
-                                  <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset" role="button" aria-expanded="false" aria-controls="link-Bags">
-                                    <a href="/collections/new-arrival-2"  class="link--text list-menu__item menu-drawer__menu-item">
-                                      Collection
-                                    </a>
-                                    
-
-
-    <svg class="icon icon-arrow " data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 339.56"><path d="M31.06,196.67H504l-88.56,88.56a26.89,26.89,0,1,0,38,38L588,188.79a26.89,26.89,0,0,0,0-38L453.49,16.29a26.89,26.89,0,0,0-38,38L504,142.88H31.06a26.9,26.9,0,0,0,0,53.79Z" fill="currentColor"/></svg>
-
-  
-
-                                    
-
-
-    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret " viewBox="0 0 10 6">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
-    </svg>
-
-  
-
-                                  </summary>
-                                  <div class="menu-drawer__submenu motion-reduce" tabindex="-1">
-                                    <div class="menu-drawer__inner-submenu">
-                                      <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                                        
-
-
-    <svg class="icon icon-arrow " data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 339.56"><path d="M31.06,196.67H504l-88.56,88.56a26.89,26.89,0,1,0,38,38L588,188.79a26.89,26.89,0,0,0,0-38L453.49,16.29a26.89,26.89,0,0,0-38,38L504,142.88H31.06a26.9,26.9,0,0,0,0,53.79Z" fill="currentColor"/></svg>
-
-  
-
-                                        Collection
-                                      </button>
-                                      <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/-bra-free"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                “Bra-Free” 实现内衣自由
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/before-class"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Back To School
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/office-wear"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Office Series
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/小香系列"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Tweed Series 小香风 
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/date-travel-collection"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Date &amp; Travel
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/blouse-collection"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Blouse Collection 
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/petite-collection"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Petite
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                        
-                                      </ul>
-                                    </div>
-                                  </div>
-                            </details>
-                          </li>
-                        
-                      
-                      
-                        
-                          <li>
-                            <a href="/collections/new-arrival-new"  class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
-                              New Arrival 
-                            </a>
-                          </li>
-                        
-                      
-                      
-                        
-                          <li>
-                            <a href="/collections/best-seller"  class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
-                              Best Seller
-                            </a>
-                          </li>
-                        
-                      
-                      
-                        
-                          
-                          <li>
-                            <details>
-                                  <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset" role="button" aria-expanded="false" aria-controls="link-Bags">
-                                    <a href="/collections/project"  class="link--text list-menu__item menu-drawer__menu-item">
-                                      Project 
-                                    </a>
-                                    
-
-
-    <svg class="icon icon-arrow " data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 339.56"><path d="M31.06,196.67H504l-88.56,88.56a26.89,26.89,0,1,0,38,38L588,188.79a26.89,26.89,0,0,0,0-38L453.49,16.29a26.89,26.89,0,0,0-38,38L504,142.88H31.06a26.9,26.9,0,0,0,0,53.79Z" fill="currentColor"/></svg>
-
-  
-
-                                    
-
-
-    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret " viewBox="0 0 10 6">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
-    </svg>
-
-  
-
-                                  </summary>
-                                  <div class="menu-drawer__submenu motion-reduce" tabindex="-1">
-                                    <div class="menu-drawer__inner-submenu">
-                                      <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                                        
-
-
-    <svg class="icon icon-arrow " data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 339.56"><path d="M31.06,196.67H504l-88.56,88.56a26.89,26.89,0,1,0,38,38L588,188.79a26.89,26.89,0,0,0,0-38L453.49,16.29a26.89,26.89,0,0,0-38,38L504,142.88H31.06a26.9,26.9,0,0,0,0,53.79Z" fill="currentColor"/></svg>
-
-  
-
-                                        Project 
-                                      </button>
-                                      <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/玲龙贺喜2024"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                玲龙贺喜🐲2024
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/y2k-millennium-playlist"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Y2K Millennium Playlist
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/before-class"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                Before Class
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/happy-cny"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                2023  Happy Chinese New Year
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/the-christmas-holiday"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                🎄The Christmas Holiday 
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/soulo-camp"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                SOULO CAMP
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                          
-                                          
-                                            <li>
-                                              <a href="/collections/afterparty"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                AFTERPARTY
-                                              </a>
-                                            </li>
-                                          
-                                        
-                                        
-                                      </ul>
-                                    </div>
-                                  </div>
-                            </details>
-                          </li>
-                        
-                      
-                      
-                        
-                          <li>
-                            <a href="/collections/unbelievable-series"  class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
-                              Unbelievable Series
-                            </a>
-                          </li>
-                        
-                      
-                    </ul>
-                  </nav>
-  
-                  <div class="menu-drawer__utility-links">
-  
-                    
-
-
-  <div class="menu-drawer__account disclosure">
-    <div class="select">
-      <select class="currency-picker select__select" name="currencies">
-        <option value="MYR" selected="selected">MYR</option>
-        
-          
-        
-          
-          <option value="SGD">SGD</option>
-          
-        
-          
-        
-        </select>
-    </div>
-  </div>
-
-
-
-  
-                    
-                    
-                    
-                      <a href="/account/login" class="menu-drawer__account link link--text focus-inset h5">
-                         
-
-
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-account " fill="none" viewBox="0 0 18 19">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor"></path>
-    </svg>
-
-  
- 
-                        
-                        Log in
-                      </a>
-                    
-                      <a href="/account/register" class="menu-drawer__account link link--text focus-inset h5">
-                        
-                         
-
-
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus " fill="none" viewBox="0 0 10 10">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor"></path>
-    </svg>
-
-  
- 
-                        Create account
-                      </a>
-                    
-                    
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-          </details>
-        </header-drawer>
-        <details-modal class="header__search">
-  <details>
-    <summary class="header__icon header__icon--search header__icon--summary link link--text focus-inset modal__toggle" aria-haspopup="dialog" aria-label="Search">
-      <span>
-        <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-          <use href="#icon-search">
-        </svg>
-        <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-          <use href="#icon-close">
-        </svg>
-      </span>
-    </summary>
-    <div class="search-modal modal__content" role="dialog" aria-modal="true" aria-label="Search">
-      <div class="modal-overlay"></div>
-      <div class="search-modal__content" tabindex="-1">
-          <form action="/search" method="get" role="search" class="search search-modal__form">
-            <div class="field">
-              <input class="search__input field__input" 
-                id="Search-In-Modal"
-                type="search"
-                name="q"
-                value=""
-                placeholder="Search"
-                autocomplete="off"
-              >
-              <label class="field__label" for="Search-In-Modal">Search</label>
-              <div class="dropdown" id="searchDropdown"></div>
-              <input type="hidden" name="search_history" class="hidden_search_history">
-              <input type="hidden" name="options[prefix]" value="last">
-              <button class="search__button field__button" aria-label="Search">
-                <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                  <use href="#icon-search">
-                </svg>
-              </button> 
-            </div>
-          </form>
-        <button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset" aria-label="accessibility.close">
-          <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-            <use href="#icon-close">
-          </svg>
-        </button>
-      </div>
-    </div>
-  </details>
-</details-modal>
-      </div>
-  
       
-        <a href="/" class="header__heading-link link link--text focus-inset">
-          
-          <img src="https://cdn.store-assets.com/s/180938/f/12372097.png" class="header__heading-logo" alt="Memories Clothing | Malaysia Online Fashion Store" loading="lazy">
-        </a>
+      <a href="http://127.0.0.1:5500/user-home.html" class="header__heading-link link link--text focus-inset">
+        <img src="logo.png" class="header__heading-logo" alt="H&H Online Clothing Store" loading="lazy">
+      </a>
       
       <nav class="header__inline-menu">
         <ul class="list-menu list-menu--inline" role="list">
+          <li>
+            <a href="http://127.0.0.1:5500/user-home.html"  class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"> Home </a>
+          </li>
           
-            
-              
-                <li>
-                  <a href="/"  class="header__menu-item header__menu-item list-menu__item link link--text focus-inset">
-                    Home
-                  </a>
-                </li>
-              
-            
-            
-              
-                
-                <li>
-                  <details-disclosure>
-                    <details>
-                      <summary class="header__menu-item list-menu__item link focus-inset">
-                        <a href="https://www.memoires.my/collections/all"  >Shop All</a>
+          <li>
+            <details-disclosure>
+              <details>
+                <summary class="header__menu-item list-menu__item link focus-inset">
+                  <a href="https://www.memoires.my/collections/all"  > Shop All </a>
                         
-
+<!-- In progress -->
 
     <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret " viewBox="0 0 10 6">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
@@ -1084,15 +438,7 @@
                   </a>
                 </li>
               
-            
-            
-            
-              
-                
-                  
-                
-                  
-                
+
               
             
         </ul>
@@ -1856,17 +1202,6 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
   as="style"
   onload="this.onload=null;this.rel='stylesheet'">
 
-
-
-
-
-
-
-
-  
-  
-
-
 <style>
   .title-center {
     place-content: center;
@@ -1887,20 +1222,7 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
       <ul class="grid grid--2-col product-grid grid--3-col-tablet grid--one-third-max grid--3-col-desktop grid--quarter-max" role="list">
         
           <li class="grid__item">
-            
 
-
-
-
-
-
-
-  
-
-
-
-
-  
 
 
 <div class="product-card-wrapper card-wrapper">
@@ -1993,56 +1315,7 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
       </div>
       
         <div class="card-information__wrapper d-flex flex-align-center">
-          
-          
-          
-          
-          
-          
-          
-            
-            
-          
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
-          
-          
-          
+
         </div>
       
       
@@ -2055,20 +1328,7 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
           </li>
         
           <li class="grid__item">
-            
 
-
-
-
-
-
-
-  
-
-
-
-
-  
 
 
 <div class="product-card-wrapper card-wrapper">
@@ -2161,65 +1421,7 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
       </div>
       
         <div class="card-information__wrapper d-flex flex-align-center">
-          
-          
-          
-          
-          
-          
-          
-            
-            
-          
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
-          
-          
+
           
         </div>
       
@@ -2234,16 +1436,6 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
         
           <li class="grid__item">
             
-
-
-
-
-
-
-
-  
-
-
 
 
   
@@ -2339,39 +1531,7 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
       </div>
       
         <div class="card-information__wrapper d-flex flex-align-center">
-          
-          
-          
-          
-          
-          
-          
-            
-            
-          
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
-          
+
           
           
         </div>
@@ -2386,20 +1546,7 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
           </li>
         
           <li class="grid__item">
-            
 
-
-
-
-
-
-
-  
-
-
-
-
-  
 
 
 <div class="product-card-wrapper card-wrapper">
@@ -2492,40 +1639,7 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
       </div>
       
         <div class="card-information__wrapper d-flex flex-align-center">
-          
-          
-          
-          
-          
-          
-          
-            
-            
-          
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
-          
-          
+
           
         </div>
       
@@ -2540,16 +1654,6 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
         
           <li class="grid__item">
             
-
-
-
-
-
-
-
-  
-
-
 
 
   
@@ -2645,55 +1749,9 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
       </div>
       
         <div class="card-information__wrapper d-flex flex-align-center">
-          
-          
-          
-          
-          
-          
-          
+
             
-            
-          
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
-          
-          
+
           
         </div>
       
@@ -3126,275 +2184,7 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
       </div>
       
         <div class="card-information__wrapper d-flex flex-align-center">
-          
-          
-          
-          
-          
-          
-          
-            
-            
-          
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
-          
-          
-            
-            
-          
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
+
           
           
           
@@ -3516,126 +2306,7 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
       </div>
       
         <div class="card-information__wrapper d-flex flex-align-center">
-          
-          
-          
-          
-          
-          
-          
-            
-            
-          
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
-          
-          
-          
+
         </div>
       
       
@@ -3754,277 +2425,7 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
       </div>
       
         <div class="card-information__wrapper d-flex flex-align-center">
-          
-          
-          
-          
-          
-          
-          
-            
-            
-          
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
-          
-          
-            
-            
-          
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
-          
-          
+
           
         </div>
       
@@ -4144,357 +2545,7 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
       </div>
       
         <div class="card-information__wrapper d-flex flex-align-center">
-          
-          
-          
-          
-          
-          
-          
-            
-            
-          
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
-          
-          
-            
-            
-          
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-              
-                
-              
-              
-            
-          
-            
-          		
-          	
-          
-            
-          
-          
+
           
         </div>
       
@@ -5228,28 +3279,10 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
         
 
 
-  <div class="disclosure mb-1">
-    <div class="select">
-      <select class="currency-picker select__select" name="currencies">
-        <option value="MYR" selected="selected">MYR</option>
-        
-          
-        
-          
-          <option value="SGD">SGD</option>
-          
-        
-          
-        
-        </select>
-    </div>
-  </div>
-
-
 
         
         <div class="footer__copyright caption">
-          <div class="copyright__content">Copyright © 2023 Memories Studio (M) Sdn Bhd</div>
+          <div class="copyright__content">Copyright © 2024 H&H Designer (M) Sdn Bhd</div>
         </div>
 
         <div class="footer__copyright caption">
@@ -5258,17 +3291,10 @@ document.getElementById('cart-notification-form').addEventListener('submit',(eve
             
             
               
-                <a href="/legal/terms-of-service">Terms of Service</a>
-              
-              
-            
-              
-                | <a href="/legal/privacy-policy">Privacy Policy</a>
-              
-              
-            
-              
-                | <a href="/legal/refund-policy">Refund Policy</a>
+                <a href="Terms & Condition.pdf">Terms of Service</a> |
+                <a href="/legal/privacy-policy">Privacy Policy</a> |
+                <a href="/legal/refund-policy">Refund Policy</a> |
+                <a href="/legal/refund-policy">Shipping Policy</a>
               
               
             
