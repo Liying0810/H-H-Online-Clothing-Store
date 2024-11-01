@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>    E-Commerce Admin Portal 
+    </title>
+  <!-- Fevicon -->
+  <link rel="icon" type="image/x-icon" href="https://ecommerce-admin-panel.infinityfreeapp.com/public/user-gear.png">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://ecommerce-admin-panel.infinityfreeapp.com/public/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/summernote/summernote-bs4.min.css">
+  
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+      <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="https://ecommerce-admin-panel.infinityfreeapp.com/public/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+    
+<!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="https://ecommerce-admin-panel.infinityfreeapp.com" class="brand-link">
+      <img src="https://ecommerce-admin-panel.infinityfreeapp.com/public/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">E-Commerce</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="https://ecommerce-admin-panel.infinityfreeapp.com/public/dist/img/admin_logo.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="https://ecommerce-admin-panel.infinityfreeapp.com" class="d-block">admin123</a>
+        </div>
+        <div class="ml-5">
+          <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#logoutModal">
+          Logout
+          </button>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="https://ecommerce-admin-panel.infinityfreeapp.com" class="nav-link ">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://ecommerce-admin-panel.infinityfreeapp.com/orders" class="nav-link ">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Orders
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://ecommerce-admin-panel.infinityfreeapp.com/products" class="nav-link ">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Products
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://ecommerce-admin-panel.infinityfreeapp.com/users" class="nav-link     active
+">
+              <i class="nav-icon far fa-plus-square"></i>
+              <p>
+                Users
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://ecommerce-admin-panel.infinityfreeapp.com/sales" class="nav-link ">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Sales
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="logoutModal">Logout from Admin Account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <strong>Are you sure you want to logout from E-commerce Admin Panel?</strong>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancle</button>
+          <form action="https://ecommerce-admin-panel.infinityfreeapp.com/logout" method="POST">
+            <input type="hidden" name="_token" value="zd49GpEIRD1BKxXgShbN7d1jSGuZdKe1CaIh1FOg" autocomplete="off">          <button type="submit" class="btn btn-primary">Yes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+                <div class="row mb-2">
+          <div class="col-sm-12">
+          <nav class="navbar navbar-expand navbar-white navbar-light">
+            <!-- main-header  -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item">
+              <!-- d-none d-sm-inline-block -->
+              <a href="#" class="nav-link">    Users
+</a>
+              <!-- <h1 class="m-0">Dashboard</h1> -->
+            </li>
+          </ul>
+          </nav>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+
+<!-- Main content -->
+<section class="content">
+
+  <!-- Default box -->
+    <div class="card">
+    <div class="card-header">
+      <h1 class="card-title">User's Details</h1>
+    </div>
+    <div class="card-body p-0">
+      <table class="table table-striped"  style=" table-layout: fixed;">
+          <thead>
+              <tr>
+                  <th style="width: 8%">
+                      User Id
+                  </th>
+                  <th style="width: 13%">
+                      Username
+                  </th>
+                  <th style="width: 22%">
+                      Contact
+                  </th>
+                  <th style="width: 25%">
+                      Address
+                  </th>
+                  <th style="width: 20%">
+                      Account detail
+                  </th>
+                  <th style="width: 10%">
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    <strong>hariom123</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            1234567890
+                                          </span><br/>
+                    <small>Email: </small><span>hariom@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          a-230, jagatpura,jaipur
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            123456789012345
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            SBIN12345
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            SBI
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            JAIPUR
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/1">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    <strong>hariomsaini</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            1234567890
+                                          </span><br/>
+                    <small>Email: </small><span>hariomsaini@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          b/712,mount road, aburoad
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            123456789012345
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            PNBN123450
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            PNB
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            ABUROAD
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/2">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    <strong>hari12345</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                          </span><br/>
+                    <small>Email: </small><span>hari@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          <small class="text-danger">NO DATA</small>
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/3">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    4
+                  </td>
+                  <td>
+                    <strong>hariomsaini123</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            1234567890
+                                          </span><br/>
+                    <small>Email: </small><span>hariomsaini123@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          a-230,street 7b,sg highway,ahmedabad
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            123456789012345
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            HDFC12345
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            HDFC
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            AHMEDABAD
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/4">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    5
+                  </td>
+                  <td>
+                    <strong>testuser</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                          </span><br/>
+                    <small>Email: </small><span>testuser@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          <small class="text-danger">NO DATA</small>
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/5">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    6
+                  </td>
+                  <td>
+                    <strong>Testride</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            1236958470
+                                          </span><br/>
+                    <small>Email: </small><span>abc5@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          Ad hk sh kkjv
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            12345698708520
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            DSS3
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            ACHCSS
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            AAJDTH
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/6">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    7
+                  </td>
+                  <td>
+                    <strong>fvvfvbg5555</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                          </span><br/>
+                    <small>Email: </small><span>dvcrvd@ggg.vom</span><br/>
+                  </td>
+                  <td>
+                                          <small class="text-danger">NO DATA</small>
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/7">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    8
+                  </td>
+                  <td>
+                    <strong>saju1234</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            5555555555
+                                          </span><br/>
+                    <small>Email: </small><span>abc@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            344434666566544
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            RFVDGFVCFRFR
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            FVFEREEFVDV
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            FVFSCSDFD
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/8">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    9
+                  </td>
+                  <td>
+                    <strong>svhkdkvn</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            9374446879
+                                          </span><br/>
+                    <small>Email: </small><span>kbcSdb3L@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          sfzfbfvbln ohofi hwe
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            1000000234
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            ISEFB384
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            NFODSDSJK
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            SVNZNVHIZS
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/9">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    10
+                  </td>
+                  <td>
+                    <strong>fad000000</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            5555576897
+                                          </span><br/>
+                    <small>Email: </small><span>fadadaee8@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          hgljygkdfkfg
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            856876587658
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            GFKFFHJG
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            DGJFG
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            GFJFJGFJGFJ
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/10">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    11
+                  </td>
+                  <td>
+                    <strong>Ademuwagun</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            8144065785
+                                          </span><br/>
+                    <small>Email: </small><span>ademuwagunremi60@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          12 yabastreet
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            8282603618
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            12345
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            ZENITH
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            LAGOS
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/11">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    12
+                  </td>
+                  <td>
+                    <strong>muhammedrafi</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                          </span><br/>
+                    <small>Email: </small><span>muhammedrafii2002@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          <small class="text-danger">NO DATA</small>
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            <small class="text-danger">NO DATA</small>
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/12">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    13
+                  </td>
+                  <td>
+                    <strong>p4radoxe</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            7832984567
+                                          </span><br/>
+                    <small>Email: </small><span>rishavv414@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          nhufhghf, 87 vgf
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            787790787878798
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            77877
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            BOB
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            HGJGHHGH
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/13">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    14
+                  </td>
+                  <td>
+                    <strong>aaggghhhhff</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            9857463748
+                                          </span><br/>
+                    <small>Email: </small><span>inb789@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          sfsdf
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            43453443343
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            RFWR344543534
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            IND
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            KK
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/14">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    15
+                  </td>
+                  <td>
+                    <strong>sp123456</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            1234567890
+                                          </span><br/>
+                    <small>Email: </small><span>sp123@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          asd
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            123456789023
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            SJGK23788Y94
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            JDHJKSHI
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            NKLDSK
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/15">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    16
+                  </td>
+                  <td>
+                    <strong>abcdefgh</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            1993940005
+                                          </span><br/>
+                    <small>Email: </small><span>abcd@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          no. 420, george street, washington dc.
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            8234597802345
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            BOFA0CN6215
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            BANKOFAMERICA
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            LOSANGELES
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/16">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                            <tr>
+                  <td>
+                    17
+                  </td>
+                  <td>
+                    <strong>Ballya6699</strong>
+                  </td>
+                  <td>
+                    <small>Phone No: </small><span>
+                                            9766827277
+                                          </span><br/>
+                    <small>Email: </small><span>nikbhalerao@gmail.com</span><br/>
+                  </td>
+                  <td>
+                                          746 ABC Peth, Pune 401102
+                                        </td>
+                  <td>
+                    <small>Account No: </small><span>
+                                            1000000000
+                                          </span><br/>
+                    <small>IFSC Code: </small><span>
+                                            132456789
+                                            </span><br/>
+                    <small>Bank Name: </small><span>
+                                            JCJCJBANK
+                                            </span><br/>
+                    <small>Branch Name: </small><span>
+                                            CHIKHLI
+                                            </span><br/>
+                  </td>
+                  <td class="project-actions">
+                      <a class="btn btn-primary btn-sm" href="https://ecommerce-admin-panel.infinityfreeapp.com/viewuser/17">
+                          <i class="fas fa-eye">
+                          </i>
+                          View
+                      </a>
+                      
+                  </td>
+              </tr>
+                        </tbody>
+      </table>
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+  
+</section>
+<!-- /.content -->
+
+</div>
+<!-- /.content-wrapper -->
+
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/moment/moment.min.js"></script>
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="https://ecommerce-admin-panel.infinityfreeapp.com/public/dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
+</body>
+</html>
